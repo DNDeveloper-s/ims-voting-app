@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/ims-voting-app/static/css/main.cf99871d.chunk.css",
-    "main.js": "/ims-voting-app/static/js/main.2c0254db.chunk.js",
-    "main.js.map": "/ims-voting-app/static/js/main.2c0254db.chunk.js.map",
+    "main.js": "/ims-voting-app/static/js/main.7599de7f.chunk.js",
+    "main.js.map": "/ims-voting-app/static/js/main.7599de7f.chunk.js.map",
     "runtime-main.js": "/ims-voting-app/static/js/runtime-main.de997739.js",
     "runtime-main.js.map": "/ims-voting-app/static/js/runtime-main.de997739.js.map",
-    "static/js/2.08b24e68.chunk.js": "/ims-voting-app/static/js/2.08b24e68.chunk.js",
-    "static/js/2.08b24e68.chunk.js.map": "/ims-voting-app/static/js/2.08b24e68.chunk.js.map",
+    "static/js/2.49d89e56.chunk.js": "/ims-voting-app/static/js/2.49d89e56.chunk.js",
+    "static/js/2.49d89e56.chunk.js.map": "/ims-voting-app/static/js/2.49d89e56.chunk.js.map",
     "index.html": "/ims-voting-app/index.html",
-    "precache-manifest.8d848a24700d652cb8bd15c3fe207735.js": "/ims-voting-app/precache-manifest.8d848a24700d652cb8bd15c3fe207735.js",
+    "precache-manifest.9ab9105bda4035f4c9ef62eb5f1f7991.js": "/ims-voting-app/precache-manifest.9ab9105bda4035f4c9ef62eb5f1f7991.js",
     "service-worker.js": "/ims-voting-app/service-worker.js",
     "static/css/main.cf99871d.chunk.css.map": "/ims-voting-app/static/css/main.cf99871d.chunk.css.map",
-    "static/js/2.08b24e68.chunk.js.LICENSE.txt": "/ims-voting-app/static/js/2.08b24e68.chunk.js.LICENSE.txt",
+    "static/js/2.49d89e56.chunk.js.LICENSE.txt": "/ims-voting-app/static/js/2.49d89e56.chunk.js.LICENSE.txt",
     "static/media/495078-PHE69C-919.jpg": "/ims-voting-app/static/media/495078-PHE69C-919.2418340e.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.de997739.js",
-    "static/js/2.08b24e68.chunk.js",
+    "static/js/2.49d89e56.chunk.js",
     "static/css/main.cf99871d.chunk.css",
-    "static/js/main.2c0254db.chunk.js"
+    "static/js/main.7599de7f.chunk.js"
   ]
 }
