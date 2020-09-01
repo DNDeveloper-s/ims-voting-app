@@ -1,0 +1,85 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: $NAVIGATION_HEIGHT;
+  background-color: $primary;
+  z-index: 99;
+
+  nav {
+    @include flexCentered();
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  &-logo {
+    height: $NAVIGATION_HEIGHT - 30;
+
+    @media (max-width: $mobile600) {
+      height: $NAVIGATION_HEIGHT - 40;
+    }
+
+    .material-icons {
+      color: #fff;
+      font-size: 40px;
+      margin-left: 8px;
+    }
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  &-title {
+    color: $primary_text;
+    text-align: center;
+
+    @media (max-width: $mobile600) {
+      font-size: 1rem;
+      margin-right: 10px;
+      word-break: break-all;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.app-drawer {
+  background-color: $pale_blue;
+  &-item {
+    font-size: 16px;
+    padding: 1rem 2rem !important;
+    @include flexCentered();
+    justify-content: flex-start !important;
+    color: $black !important;
+    width: 80vw;
+    max-width: 250px;
+
+    &-link {
+      &.active {
+        background-color: $secondary !important;
+      }
+    }
+
+    &.logo {
+      background-color: $primary;
+
+      img {
+        width: 150px;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

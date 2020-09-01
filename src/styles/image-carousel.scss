@@ -1,0 +1,37 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+
+.images-holder {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: $mobile600) {
+    height: 40vh;
+  }
+}
+
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  object-fit: fill;
+
+  &::before {
+    content: '';
+    @include absoluteFill();
+    background-color: $white-80;
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 2;
+  }
+
+  img {
+    width: 100%;
+    max-width: $WRAPPER_MAX_WIDTH;
+    height: auto;
+    filter: blur(20px);
+  }
+}

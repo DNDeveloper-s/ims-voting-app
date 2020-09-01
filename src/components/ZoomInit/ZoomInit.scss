@@ -1,0 +1,70 @@
+*:focus {
+  outline: none;
+  border: none;
+}
+
+#zmmtg-root, .meeting-app, .meeting-app>div {
+  width: 600px !important;
+  height: 500px !important;
+}
+
+.active-video-container__wrap {
+  width: 600px !important;
+  height: auto !important;
+}
+
+.meeting-client, .meeting-client-inner {
+  position: relative !important;
+}
+
+footer {
+  zoom: 0.7 !important;
+  width: 100% !important;
+}
+
+#wc-container-left {
+  width: 600px !important;
+}
+
+#wc-container-right {
+  width: 300px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+#wc-loading {
+  width: 600px !important;
+  height: 500px !important;
+}
+
+#wc-content {
+  overflow: visible !important;
+}
+
+#wc-container-right {
+  width: 300px !important;
+}
+
+.join-dialog__tabs .zmu-tabs__tab-container .zmu-tabs__tabs-list .zmu-tabs__tab-bar {
+  zoom: 0.7 !important;
+}
+
+.join-dialog {
+  width: 600px !important;
+  height: 200px !important;
+}
+
+.join-audio-by-voip__join-btn {
+  margin-top: 10px !important;
+  zoom: 0.8 !important;
+}
+
+.ReactVirtualized__List.chat-virtualized-list {
+  height: 350px !important;
+  width: 300px !important;
+}
+
+.ReactVirtualized__Grid__innerScrollContainer>* {
+  width: 290px !important;
+}

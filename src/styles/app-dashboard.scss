@@ -1,0 +1,144 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+
+.ims_dashboard {
+
+  &-content {
+    margin-top: $NAVIGATION_HEIGHT;
+  }
+
+  &-carousel {
+
+    &-image {
+      width: 100%;
+      overflow: hidden;
+      display: block;
+      max-width: $WRAPPER_MAX_WIDTH;
+      margin: 0 auto;
+
+      @media (max-width: $mobile600) {
+        //width: auto;
+        //min-width: 100vw;
+        //height: 300px;
+        height: 40vh;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &-tabs {
+    background-color: $very_light_blue;
+
+    button {
+      color: $primary;
+    }
+
+    .MuiTabs-root {
+      min-height: 66px;
+
+      .MuiTabs-flexContainer {
+        height: 100%;
+      }
+    }
+
+    &-links {
+      @include flexCentered();
+      justify-content: space-evenly;
+
+      > a {
+        height: 100%;
+        flex: 1;
+        @include flexCentered();
+        transition: .3s ease-in-out .2s;
+
+        > button {
+          width: 100% !important;
+        }
+
+        &.active {
+          background-color: rgba(0,0,0,0.08);
+        }
+      }
+    }
+
+    &.wrapper {
+
+      @media (max-width: $mobile600) {
+        padding: 0;
+      }
+    }
+
+    &-button {
+
+      &-holder {
+        justify-content: space-evenly;
+
+        @media (max-width: $mobile600) {
+          display: block !important;
+          overflow: auto;
+        }
+
+        > button {
+          flex: 1;
+          background-color: white;
+          transition: .2s ease-in-out .15s;
+
+          &.selected_tab {
+            background-color: rgba(0,0,0,0.15);
+          }
+        }
+      }
+    }
+  }
+}
+
+.PrivateTabIndicator-root-1.PrivateTabIndicator-colorSecondary-3.MuiTabs-indicator {
+
+  @media (max-width: $mobile600) {
+    display: none;
+  }
+}
+
+.tab-panel {
+
+  &-container {
+    font-size: 17px;
+    padding: 2rem;
+
+    ol {
+      margin: 0;
+
+      li {
+        line-height: 1.5;
+        margin: 10px 0;
+
+        > ol {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    &.election {
+
+      .separator {
+        margin-top: 40px;
+
+        > .header {
+          font-weight: 800;
+          text-decoration: underline;
+        }
+
+        > .title {
+          font-weight: 800;
+          color: $black;
+        }
+
+        > .title_braces {
+          font-size: 13px;
+          color: $black-70;
+        }
+      }
+    }
+
+  }
+}
