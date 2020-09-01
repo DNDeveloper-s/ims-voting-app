@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Tab, Tabs} from "@material-ui/core";
-import { withRouter } from "react-router";
+import {Redirect, withRouter} from "react-router";
 import {Route, Switch} from "react-router";
 import TabPanel from "./TabPanel";
 import GuideLines from "./TabPanels/GuideLines";
@@ -26,14 +26,14 @@ const tabIndexViaRoute = {
 }
 
 const TabsHolder = (props) => {
-  const [value, setValue] = useState(tabIndexViaRoute[props.location.pathname]);
+  const [value, setValue] = useState(tabIndexViaRoute[props.location.pathname] || 0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   const changeRouteTo = route => {
-      props.history.push(route);
+      props.history.push(`${props.match.url.length > 1 ? props.match.url : ''}${route}`);
   }
 
   return (
@@ -58,11 +58,12 @@ const TabsHolder = (props) => {
         </div>
         <div className="wrapper">
             <Switch>
-                <Route path={routes.ELECTION} component={Election} />
-                <Route path={routes.CLUBS} component={Clubs} />
-                <Route path={routes.NOTICES} component={Notices} />
-                <Route path={routes.GUIDELINES} component={GuideLines} />
-                <Route path={routes.SCHEDULE} component={Schedule} />
+                <Route path={`${props.match.url.length > 1 ? props.match.url : ''}${routes.ELECTION}`} component={Election} />
+                <Route path={`${props.match.url.length > 1 ? props.match.url : ''}${routes.CLUBS}`} component={Clubs} />
+                <Route path={`${props.match.url.length > 1 ? props.match.url : ''}${routes.NOTICES}`} component={Notices} />
+                <Route path={`${props.match.url.length > 1 ? props.match.url : ''}${routes.GUIDELINES}`} component={GuideLines} />
+                <Route path={`${props.match.url.length > 1 ? props.match.url : ''}${routes.SCHEDULE}`} component={Schedule} />
+                <Redirect to={`${props.match.url.length > 1 ? props.match.url : ''}${routes.ELECTION}`} />
             </Switch>
         </div>
     </>
