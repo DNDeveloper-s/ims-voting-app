@@ -57,8 +57,8 @@ const rows = schedules.map(schedule => createData(
       <NoBorderTableCell>{club}</NoBorderTableCell>
     </PaddedTabRow>
   )),
-  '02.09.2020',
-  '2.00pm to 4.00pm',
+  schedule.date,
+  schedule.time,
   <>
     <p>{schedule.zoomId[0]}</p>
     <p>{schedule.zoomId[1]}</p>

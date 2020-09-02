@@ -64,8 +64,8 @@ export const schedules = [
 		date: '03.09.2020',
 		time: '2.00pm to 4.00pm',
 		zoomId: [
-			'Topic: Debate of IT Club, Sports Club, Desktop App Club and Journalism & Mass Communication Club',
-			'Time: Sep 2, 2020 04:00 PM India',
+			'Topic: Debate of Cultural Club, Photography Club and Big Ideas Club',
+			'Time: Sep 3, 2020 02:00 PM India',
 			'Meeting ID: 955 3342 4921',
 			'Passcode: 640833'
 		],
