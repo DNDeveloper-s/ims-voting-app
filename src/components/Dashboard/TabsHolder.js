@@ -12,10 +12,11 @@ function a11yProps(index) {
 }
 
 const tabIndexViaRoute = {
-    [routes.ELECTION]: 0,
-    [routes.CLUBS]: 1,
-    [routes.GUIDELINES]: 2,
-    [routes.SCHEDULE]: 3,
+  [routes.ABOUT]: 0,
+    [routes.ELECTION]: 1,
+    [routes.CLUBS]: 2,
+    [routes.GUIDELINES]: 3,
+    [routes.SCHEDULE]: 4,
 }
 
 const TabsHolder = (props) => {
