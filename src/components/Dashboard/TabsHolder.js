@@ -2,13 +2,7 @@ import React, {useState} from 'react';
 import {Tab, Tabs} from "@material-ui/core";
 import {Redirect, withRouter} from "react-router";
 import {Route, Switch} from "react-router";
-import TabPanel from "./TabPanel";
-import GuideLines from "./TabPanels/GuideLines";
-import {constants, routes} from "../../helpers/constants";
-import Election from "./TabPanels/Election";
-import Clubs from "./TabPanels/Clubs";
-import Notices from "./TabPanels/Notices";
-import Schedule from "./TabPanels/Schedule";
+import {constants, routes, tabs} from "../../helpers/constants";
 
 function a11yProps(index) {
   return {
@@ -20,9 +14,8 @@ function a11yProps(index) {
 const tabIndexViaRoute = {
     [routes.ELECTION]: 0,
     [routes.CLUBS]: 1,
-    [routes.NOTICES]: 2,
-    [routes.GUIDELINES]: 3,
-    [routes.SCHEDULE]: 4,
+    [routes.GUIDELINES]: 2,
+    [routes.SCHEDULE]: 3,
 }
 
 const TabsHolder = (props) => {
@@ -33,7 +26,8 @@ const TabsHolder = (props) => {
   };
 
   const changeRouteTo = route => {
-      props.history.push(`${props.match.url.length > 1 ? props.match.url : ''}${route}`);
+    console.log(props);
+    props.history.push(`${props.match.url.length > 1 ? props.match.url : ''}${route}`);
   }
 
   return (
@@ -47,23 +41,19 @@ const TabsHolder = (props) => {
                         onChange={handleChange}
                         aria-label="nav tabs example"
                     >
-                        <Tab onClick={() => changeRouteTo(routes.ELECTION)} label="Election" {...a11yProps(0)} />
-                        <Tab onClick={() => changeRouteTo(routes.CLUBS)} label="Clubs" {...a11yProps(1)} />
-                        <Tab onClick={() => changeRouteTo(routes.NOTICES)} label="Notices" {...a11yProps(2)} />
-                        <Tab onClick={() => changeRouteTo(routes.GUIDELINES)} label="GuideLines" {...a11yProps(3)} />
-                        <Tab onClick={() => changeRouteTo(routes.SCHEDULE)} label="Campaign Schedule" {...a11yProps(4)} />
+                      {tabs.map((tab, ind) => (
+                        <Tab key={tab.label} onClick={() => changeRouteTo(tab.route)} label={tab.label} {...a11yProps(ind)} />
+                      ))}
                     </Tabs>
                 )}
             </div>
         </div>
-        <div className="wrapper">
+        <div className="wrapper" style={{padding: props.location.pathname.includes('schedule') ? 0 : ''}}>
             <Switch>
-                <Route path={`${props.match.url.length > 1 ? props.match.url : ''}${routes.ELECTION}`} component={Election} />
-                <Route path={`${props.match.url.length > 1 ? props.match.url : ''}${routes.CLUBS}`} component={Clubs} />
-                <Route path={`${props.match.url.length > 1 ? props.match.url : ''}${routes.NOTICES}`} component={Notices} />
-                <Route path={`${props.match.url.length > 1 ? props.match.url : ''}${routes.GUIDELINES}`} component={GuideLines} />
-                <Route path={`${props.match.url.length > 1 ? props.match.url : ''}${routes.SCHEDULE}`} component={Schedule} />
-                <Redirect to={`${props.match.url.length > 1 ? props.match.url : ''}${routes.ELECTION}`} />
+              {tabs.map((tab, ind) => (
+                <Route key={tab.label} path={`${props.match.url.length > 1 ? props.match.url : ''}${tab.route}`} component={tab.component} />
+              ))}
+              <Redirect to={`${props.match.url.length > 1 ? props.match.url : ''}${constants.FALL_BACK_ROUTE}`} />
             </Switch>
         </div>
     </>

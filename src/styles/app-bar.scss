@@ -23,12 +23,19 @@
 
     @media (max-width: $mobile600) {
       height: $NAVIGATION_HEIGHT - 40;
+      @include flexCentered();
     }
 
     .material-icons {
-      color: #fff;
+      cursor: pointer;
+      @include svgSize(2rem);
+      @include flexCentered();
       font-size: 40px;
       margin-left: 8px;
+
+      svg, path {
+        fill: #fff;
+      }
     }
 
     img {
