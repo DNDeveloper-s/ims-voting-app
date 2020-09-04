@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/">
+        <Route path={"/"}>
           <Dashboard />
         </Route>
       </Switch>
