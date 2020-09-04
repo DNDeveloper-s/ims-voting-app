@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8bd2991ccced9c46785b5fd18cf8175c",
+    "revision": "2075f6adae963e714adc34d1abecee1f",
     "url": "/ims-voting-app/index.html"
   },
   {
-    "revision": "6b0ecc7d1d16829460c1",
-    "url": "/ims-voting-app/static/css/main.7ee1b7ef.chunk.css"
+    "revision": "90eb13f6141c1969805d",
+    "url": "/ims-voting-app/static/css/main.1320311e.chunk.css"
   },
   {
     "revision": "1f7e2371485320dd2756",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ims-voting-app/static/js/2.6183c0f9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6b0ecc7d1d16829460c1",
+    "revision": "90eb13f6141c1969805d",
     "url": "/ims-voting-app/static/js/main.df9cab74.chunk.js"
   },
   {
