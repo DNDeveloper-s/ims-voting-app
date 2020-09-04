@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2075f6adae963e714adc34d1abecee1f",
+    "revision": "1a8aafed2b73e9098e6c4c41d7df845d",
     "url": "/ims-voting-app/index.html"
   },
   {
-    "revision": "90eb13f6141c1969805d",
+    "revision": "e884ee2b959ea2204527",
     "url": "/ims-voting-app/static/css/main.1320311e.chunk.css"
   },
   {
-    "revision": "1f7e2371485320dd2756",
-    "url": "/ims-voting-app/static/js/2.6183c0f9.chunk.js"
+    "revision": "a62a49dc50c33d9fa798",
+    "url": "/ims-voting-app/static/js/2.3f1d8659.chunk.js"
   },
   {
     "revision": "40f4e49d93b0ff3f8c0e62b8e7b22c41",
-    "url": "/ims-voting-app/static/js/2.6183c0f9.chunk.js.LICENSE.txt"
+    "url": "/ims-voting-app/static/js/2.3f1d8659.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "90eb13f6141c1969805d",
-    "url": "/ims-voting-app/static/js/main.df9cab74.chunk.js"
+    "revision": "e884ee2b959ea2204527",
+    "url": "/ims-voting-app/static/js/main.19c28743.chunk.js"
   },
   {
     "revision": "f404201cac05aea64be8",
