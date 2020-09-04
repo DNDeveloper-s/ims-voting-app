@@ -7,13 +7,14 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import {constants} from "./helpers/constants";
 
 function App() {
 
   return (
     <Router>
       <Switch>
-        <Route path={"/ims-voting-app"}>
+        <Route path={constants.HOME_ROUTE}>
           <Dashboard />
         </Route>
       </Switch>

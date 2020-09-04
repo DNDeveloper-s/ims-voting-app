@@ -12,11 +12,11 @@ function a11yProps(index) {
 }
 
 const tabIndexViaRoute = {
-  [routes.ABOUT]: 0,
-    [routes.ELECTION]: 1,
-    [routes.CLUBS]: 2,
-    [routes.GUIDELINES]: 3,
-    [routes.SCHEDULE]: 4,
+  [constants.HOME_ROUTE + routes.ABOUT]: 0,
+    [constants.HOME_ROUTE + routes.ELECTION]: 1,
+    [constants.HOME_ROUTE + routes.CLUBS]: 2,
+    [constants.HOME_ROUTE + routes.GUIDELINES]: 3,
+    [constants.HOME_ROUTE + routes.SCHEDULE]: 4,
 }
 
 const TabsHolder = (props) => {
@@ -54,7 +54,7 @@ const TabsHolder = (props) => {
               {tabs.map((tab, ind) => (
                 <Route key={tab.label} path={`${props.match.url.length > 1 ? props.match.url : ''}${tab.route}`} component={tab.component} />
               ))}
-              {/*<Redirect to={`${props.match.url.length > 1 ? props.match.url : ''}${constants.FALL_BACK_ROUTE}`} />*/}
+              <Redirect to={`${props.match.url.length > 1 ? props.match.url : ''}${constants.FALL_BACK_ROUTE}`} />
             </Switch>
         </div>
     </>

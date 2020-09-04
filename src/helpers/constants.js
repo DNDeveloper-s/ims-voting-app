@@ -14,7 +14,8 @@ export const routes = {
 
 export const constants = {
     BREAK_POINT: 600,
-    FALL_BACK_ROUTE: routes.ABOUT
+    FALL_BACK_ROUTE: routes.ABOUT,
+    HOME_ROUTE: '/ims-voting-app'
 }
 
 export const tabs = [
