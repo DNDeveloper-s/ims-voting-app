@@ -13,11 +13,11 @@ function a11yProps(index) {
 }
 
 const tabIndexViaRoute = {
-  [filterRoute(constants.HOME_ROUTE) + routes.ABOUT]: 0,
-    [filterRoute(constants.HOME_ROUTE) + routes.ELECTION]: 1,
-    [filterRoute(constants.HOME_ROUTE) + routes.CLUBS]: 2,
-    [filterRoute(constants.HOME_ROUTE) + routes.GUIDELINES]: 3,
-    [filterRoute(constants.HOME_ROUTE) + routes.SCHEDULE]: 4,
+  [routes.ABOUT]: 0,
+    [routes.ELECTION]: 1,
+    [routes.CLUBS]: 2,
+    [routes.GUIDELINES]: 3,
+    [routes.SCHEDULE]: 4,
 }
 
 const TabsHolder = (props) => {

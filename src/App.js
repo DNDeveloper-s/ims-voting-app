@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path={constants.HOME_ROUTE}>
+        <Route path={"/"}>
           <Dashboard />
         </Route>
       </Switch>
