@@ -3,6 +3,7 @@ import {Tab, Tabs} from "@material-ui/core";
 import {Redirect, withRouter} from "react-router";
 import {Route, Switch} from "react-router";
 import {constants, routes, tabs} from "../../helpers/constants";
+import {filterRoute} from "../../helpers/utils";
 
 function a11yProps(index) {
   return {
@@ -12,11 +13,11 @@ function a11yProps(index) {
 }
 
 const tabIndexViaRoute = {
-  [constants.HOME_ROUTE + routes.ABOUT]: 0,
-    [constants.HOME_ROUTE + routes.ELECTION]: 1,
-    [constants.HOME_ROUTE + routes.CLUBS]: 2,
-    [constants.HOME_ROUTE + routes.GUIDELINES]: 3,
-    [constants.HOME_ROUTE + routes.SCHEDULE]: 4,
+  [filterRoute(constants.HOME_ROUTE) + routes.ABOUT]: 0,
+    [filterRoute(constants.HOME_ROUTE) + routes.ELECTION]: 1,
+    [filterRoute(constants.HOME_ROUTE) + routes.CLUBS]: 2,
+    [filterRoute(constants.HOME_ROUTE) + routes.GUIDELINES]: 3,
+    [filterRoute(constants.HOME_ROUTE) + routes.SCHEDULE]: 4,
 }
 
 const TabsHolder = (props) => {
