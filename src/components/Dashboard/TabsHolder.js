@@ -54,7 +54,7 @@ const TabsHolder = (props) => {
               {tabs.map((tab, ind) => (
                 <Route key={tab.label} path={`${props.match.url.length > 1 ? props.match.url : ''}${tab.route}`} component={tab.component} />
               ))}
-              <Redirect to={`${props.match.url.length > 1 ? props.match.url : ''}${constants.FALL_BACK_ROUTE}`} />
+              {/*<Redirect to={`${props.match.url.length > 1 ? props.match.url : ''}${constants.FALL_BACK_ROUTE}`} />*/}
             </Switch>
         </div>
     </>
