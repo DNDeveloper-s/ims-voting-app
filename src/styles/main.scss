@@ -5,6 +5,70 @@
 @import "app-dashboard";
 @import "image-carousel";
 
+#modal-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 3000;
+
+  .app-backdrop {
+    width: 100vw;
+    height: 100vh;
+    background-color: $black-60;
+    animation: comeInWithoutScale .25s cubic-bezier(.96,.57,.57,.98);
+  }
+
+  .app-modal {
+    @include absCentered();
+    width: 80vw;
+    height: 80vh;
+    max-width: 40rem;
+    //background-color: $white;
+    overflow: auto;
+    border-radius: 6px;
+    animation: comeIn .25s cubic-bezier(.96,.57,.57,.98);
+
+    @media (max-width: $mobile600) {
+      width: 95vw;
+      height: 95vh;
+    }
+
+    .close-modal {
+      position: sticky;
+      top: 4px;
+      left: 95%;
+      cursor: pointer;
+      width: 95vw;
+      height: 95vh;
+      //right: 4px;
+      border-radius: 200px;
+      @include svgSize(1.3rem);
+
+      @media (max-width: $mobile600) {
+        left: 91%;
+      }
+
+      svg {
+        transition: $generic-transition;
+        fill: $black-60;
+      }
+
+      &:active {
+        svg {
+          fill: $black-20;
+        }
+      }
+    }
+  }
+
+  .members-table {
+
+    @media (max-width: $mobile600) {
+      zoom: 0.8;
+    }
+  }
+}
 
 * {
   margin: 0;
@@ -33,7 +97,6 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: $grey;
@@ -103,3 +166,26 @@ textarea {
   }
 }
 
+@keyframes comeInWithoutScale {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@keyframes comeIn {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
