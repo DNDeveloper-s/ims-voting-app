@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ims-voting-app/static/css/main.d24c894f.chunk.css",
+    "main.css": "/ims-voting-app/static/css/main.f2ba87ae.chunk.css",
     "main.js": "/ims-voting-app/static/js/main.58860bbb.chunk.js",
     "main.js.map": "/ims-voting-app/static/js/main.58860bbb.chunk.js.map",
     "runtime-main.js": "/ims-voting-app/static/js/runtime-main.de997739.js",
@@ -8,15 +8,15 @@
     "static/js/2.a22068e7.chunk.js": "/ims-voting-app/static/js/2.a22068e7.chunk.js",
     "static/js/2.a22068e7.chunk.js.map": "/ims-voting-app/static/js/2.a22068e7.chunk.js.map",
     "index.html": "/ims-voting-app/index.html",
-    "precache-manifest.ae18421a5c68963103c7c10bcaef5521.js": "/ims-voting-app/precache-manifest.ae18421a5c68963103c7c10bcaef5521.js",
+    "precache-manifest.9249834640abfb835b80e8607c52dd5f.js": "/ims-voting-app/precache-manifest.9249834640abfb835b80e8607c52dd5f.js",
     "service-worker.js": "/ims-voting-app/service-worker.js",
-    "static/css/main.d24c894f.chunk.css.map": "/ims-voting-app/static/css/main.d24c894f.chunk.css.map",
+    "static/css/main.f2ba87ae.chunk.css.map": "/ims-voting-app/static/css/main.f2ba87ae.chunk.css.map",
     "static/js/2.a22068e7.chunk.js.LICENSE.txt": "/ims-voting-app/static/js/2.a22068e7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.de997739.js",
     "static/js/2.a22068e7.chunk.js",
-    "static/css/main.d24c894f.chunk.css",
+    "static/css/main.f2ba87ae.chunk.css",
     "static/js/main.58860bbb.chunk.js"
   ]
 }
