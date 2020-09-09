@@ -15,7 +15,8 @@ export const routes = {
 export const constants = {
     BREAK_POINT: 600,
     FALL_BACK_ROUTE: routes.ABOUT,
-    HOME_ROUTE: '/'
+    HOME_ROUTE: '/',
+    FORM_LINK: 'https://docs.google.com/forms/d/e/1FAIpQLSfxnx8bhvPTypIjQLVFSiOGcEE4vFOkCA-mhTyf1kVBACISSg/viewform?usp=sf_link'
 }
 
 export const tabs = [

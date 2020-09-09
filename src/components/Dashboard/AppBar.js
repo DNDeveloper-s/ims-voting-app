@@ -27,7 +27,7 @@ function AppBar(props) {
         </div>
         <div className="navigation-title">
           <p>Club Committee Election 2020</p>
-          <a href="https://google.com" target="_blank">
+          <a href={constants.FORM_LINK} target="_blank">
             <Button variant={"contained"} style={{backgroundColor: "#e9b120"}}>
               Vote now
             </Button>
