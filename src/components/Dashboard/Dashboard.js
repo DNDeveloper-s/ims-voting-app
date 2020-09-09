@@ -4,9 +4,21 @@ import ImageCarousel from "./ImageCarousel";
 import TabsHolder from "./TabsHolder";
 import AppModal from "./AppModal";
 import {Button} from "@material-ui/core";
+import GSheetReader from 'g-sheets-api';
+import {excelKeys, memberVotes} from "../../helpers/clubData";
+import useSheetsApi from "../../hooks/useSheetsApi";
 
 const Dashboard = (props) => {
   const [showNominee, setShowNominee] = useState(false);
+  const {fetchSheetData, membersVote} = useSheetsApi();
+
+
+  useEffect(() => {
+    fetchSheetData();
+    setInterval(() => {
+      fetchSheetData();
+    }, 1000 * 60);
+  }, []);
 
   return (
     <div className='ims_dashboard'>
@@ -14,7 +26,7 @@ const Dashboard = (props) => {
       <div className="ims_dashboard-content">
         <ImageCarousel />
         <TabsHolder />
-        {showNominee && <AppModal setShowNominee={setShowNominee} />}
+        {showNominee && <AppModal refreshHandle={fetchSheetData} membersVote={membersVote} setShowNominee={setShowNominee} />}
         <Button style={{
           position: 'fixed',
           bottom: '20px',

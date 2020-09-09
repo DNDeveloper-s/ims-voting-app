@@ -22,17 +22,18 @@ const useStyles = makeStyles({
 	},
 });
 
-function MemberList() {
+function MemberList({membersVote}) {
 	const classes = useStyles();
 
 	return (
-		<TableContainer component={Paper} style={{marginTop: "-20px"}}>
+		<TableContainer component={Paper} style={{marginTop: "-58px"}}>
 			<Table className={[classes.table, 'members-table']} aria-label="simple table">
 				<TableHead>
 					<TableRow>
 						<StyledTableCell align="left">Member Name</StyledTableCell>
 						<StyledTableCell align="left">Club Name</StyledTableCell>
 						<StyledTableCell align="left">Applied Post</StyledTableCell>
+						<StyledTableCell align="left">Live Count</StyledTableCell>
 					</TableRow>
 				</TableHead>
 				<TableBody>
@@ -41,6 +42,7 @@ function MemberList() {
 							<TableCell align="left">{row.name}</TableCell>
 							<TableCell align="left">{row.clubName}</TableCell>
 							<TableCell align="left">{row.post}</TableCell>
+							<TableCell align="left">{membersVote[row.name]}</TableCell>
 						</TableRow>
 					))}
 				</TableBody>

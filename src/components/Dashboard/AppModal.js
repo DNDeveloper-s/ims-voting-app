@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import MemberList from "./MemberList";
 import CloseIcon from "../../icons/CloseIcon";
+import ReloadIcon from "../../icons/ReloadIcon";
+import {Button} from "@material-ui/core";
 
-const AppModal = ({setShowNominee}) => {
+const AppModal = ({membersVote, refreshHandle, setShowNominee}) => {
 
 
 	return ReactDOM.createPortal(
@@ -13,7 +15,12 @@ const AppModal = ({setShowNominee}) => {
 				<div className="close-modal" onClick={() => setShowNominee(false)}>
 					<CloseIcon />
 				</div>
-				<MemberList />
+				<div className="refresh-modal">
+					<Button variant={"contained"} color="primary" onClick={refreshHandle}>
+						<ReloadIcon />
+					</Button>
+				</div>
+				<MemberList membersVote={membersVote} />
 			</div>
 		</>,
 		document.getElementById('modal-root')

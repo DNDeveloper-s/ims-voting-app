@@ -34,13 +34,43 @@
       height: 95vh;
     }
 
+    .refresh-modal {
+      position: sticky;
+      top: 94%;
+      left: 88%;
+      @include flexCentered();
+      color: #fff;
+      display: inline-flex;
+      border-radius: 4px;
+      cursor: pointer;
+
+      p {
+        margin: 0;
+        font-size: 14px;
+        margin-right: 4px;
+      }
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+
+        path {
+          fill: #fff;
+        }
+      }
+
+      @media (max-width: $mobile600) {
+        left: 91%;
+      }
+    }
+
     .close-modal {
       position: sticky;
       top: 4px;
       left: 95%;
       cursor: pointer;
-      width: 95vw;
-      height: 95vh;
+      //width: 95vw;
+      //height: 95vh;
       //right: 4px;
       border-radius: 200px;
       @include svgSize(1.3rem);
