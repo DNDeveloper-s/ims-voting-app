@@ -13,9 +13,6 @@ const Dashboard = () => {
 
   useEffect(() => {
     fetchSheetData();
-    setInterval(() => {
-      fetchSheetData();
-    }, 1000 * 60);
   }, []);
 
   return (
@@ -34,7 +31,7 @@ const Dashboard = () => {
           variant="contained"
           color="primary"
         >
-          View Nominees
+          View Live Voting
         </Button>
       </div>
     </div>
