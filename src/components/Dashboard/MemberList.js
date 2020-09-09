@@ -42,7 +42,7 @@ function MemberList({membersVote}) {
 							<TableCell align="left">{row.name}</TableCell>
 							<TableCell align="left">{row.clubName}</TableCell>
 							<TableCell align="left">{row.post}</TableCell>
-							<TableCell align="left">{membersVote[row.name]}</TableCell>
+							<TableCell align="left">{membersVote ? membersVote[row.name] : 'Fetching'}</TableCell>
 						</TableRow>
 					))}
 				</TableBody>

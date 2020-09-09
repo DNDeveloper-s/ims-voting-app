@@ -2,10 +2,12 @@ import React, {useState} from 'react';
 import GSheetReader from "g-sheets-api";
 import {excelKeys, memberVotes} from "../helpers/clubData";
 
-const useSheetsApi = props => {
+const useSheetsApi = () => {
 	const [membersVote, setMembersVote] = useState(null);
+	const [loading, setLoading] = useState(false);
 
 	const fetchSheetData = () => {
+		setLoading(true);
 		const options = {
 			sheetId: '1BBvpZgqpNHoIzx529ufJRMPvSxt86Z5YJVFb4Lmie3w',
 			sheetNumber: 1,
@@ -24,9 +26,10 @@ const useSheetsApi = props => {
 		})
 
 		setMembersVote(initialMembersVoteList);
+		setLoading(false);
 	}
 
-	return {fetchSheetData, membersVote, setMembersVote};
+	return {fetchSheetData, loading, membersVote, setMembersVote};
 
 }
 

@@ -5,7 +5,7 @@ import CloseIcon from "../../icons/CloseIcon";
 import ReloadIcon from "../../icons/ReloadIcon";
 import {Button} from "@material-ui/core";
 
-const AppModal = ({membersVote, refreshHandle, setShowNominee}) => {
+const AppModal = ({loading, membersVote, refreshHandle, setShowNominee}) => {
 
 
 	return ReactDOM.createPortal(
@@ -15,7 +15,7 @@ const AppModal = ({membersVote, refreshHandle, setShowNominee}) => {
 				<div className="close-modal" onClick={() => setShowNominee(false)}>
 					<CloseIcon />
 				</div>
-				<div className="refresh-modal">
+				<div className={["refresh-modal", loading ? "loading" : ""].join(" ")}>
 					<Button variant={"contained"} color="primary" onClick={refreshHandle}>
 						<ReloadIcon />
 					</Button>
