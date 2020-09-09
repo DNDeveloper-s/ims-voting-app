@@ -5,6 +5,10 @@
 
   &-content {
     margin-top: $NAVIGATION_HEIGHT;
+
+    @media (max-width: $mobile600) {
+      margin-top: $NAVIGATION_HEIGHT - 10;
+    }
   }
 
   &-carousel {
